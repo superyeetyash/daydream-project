@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://oa6oklbl8m10" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c2ajoocoe8pn1" path="res://icon.svg" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://d7ubkjvjr5o4" path="res://win_zone.gd" id="2_5h6wk"]
+[ext_resource type="Script" path="res://loop_zone.gd" id="3_l8dk2"]
 [ext_resource type="Texture2D" uid="uid://r0wjiyfywa84" path="res://Archis/Fall.png" id="3_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b2ccdu5wqf8fd" path="res://Archis/Run.png" id="3_7mycd"]
 [ext_resource type="Texture2D" uid="uid://b52ic1ctshjex" path="res://Terrain (16x16).png" id="3_h2yge"]
@@ -193,6 +194,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_winzone"]
 size = Vector2(111867, 28281)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_loopzone"]
+size = Vector2(500, 1000)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272bh"]
 texture = ExtResource("3_lquwl")
 0:0/0 = 0
@@ -289,6 +293,13 @@ script = ExtResource("2_5h6wk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinZone"]
 position = Vector2(54222.5, 30346)
 shape = SubResource("RectangleShape2D_winzone")
+
+[node name="LoopZone" type="Area2D" parent="."]
+script = ExtResource("3_l8dk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoopZone"]
+position = Vector2(5500, 0)
+shape = SubResource("RectangleShape2D_loopzone")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(78.99999, 18)
