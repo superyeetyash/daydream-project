@@ -284,10 +284,11 @@ sprite_frames = SubResource("SpriteFrames_w48qg")
 animation = &"idle"
 
 [node name="WinZone" type="Area2D" parent="."]
+monitoring = true
 script = ExtResource("2_5h6wk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinZone"]
-position = Vector2(0, 2700)
+position = Vector2(0, 800)
 shape = SubResource("RectangleShape2D_winzone")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
