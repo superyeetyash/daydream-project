@@ -273,8 +273,8 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 texture_filter = 1
-position = Vector2(-10, 70)
-scale = Vector2(10, 10)
+position = Vector2(-10, 50)
+scale = Vector2(15, 15)
 sprite_frames = SubResource("SpriteFrames_w48qg")
 animation = &"idle"
 
