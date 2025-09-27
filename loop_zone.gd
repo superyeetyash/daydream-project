@@ -18,5 +18,5 @@ func _on_body_entered(body: Node2D) -> void:
 		# Teleport player back to the starting position
 		var player = body as CharacterBody2D
 		# Reset player position to near the beginning of the level (around the spawn point)
-		player.position = Vector2(50, 0)  # Teleport near player spawn
+		player.position = Vector2(20000, 2)  # Teleport near player spawn
 		print("Player teleported back to start position: ", player.position)
