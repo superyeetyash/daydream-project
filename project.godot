@@ -39,8 +39,10 @@ right={
 
 [physics]
 
-2d/default_gravity=1142.875
+3d/default_gravity=10.015999999999998
+2d/default_gravity=2815.518
 
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
