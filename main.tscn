@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=4 uid="uid://dtuqbrulfuv2l"]
+[gd_scene load_steps=38 format=4 uid="uid://dtuqbrulfuv2l"]
 
 [ext_resource type="Script" uid="uid://oa6oklbl8m10" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c2ajoocoe8pn1" path="res://icon.svg" id="2_1bvp3"]
+[ext_resource type="Script" path="res://win_zone.gd" id="2_5h6wk"]
 [ext_resource type="Texture2D" uid="uid://r0wjiyfywa84" path="res://Archis/Fall.png" id="3_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b2ccdu5wqf8fd" path="res://Archis/Run.png" id="3_7mycd"]
 [ext_resource type="Texture2D" uid="uid://b52ic1ctshjex" path="res://Terrain (16x16).png" id="3_h2yge"]
@@ -11,6 +12,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(85.5, 108.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_winzone"]
+size = Vector2(2000, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
 atlas = ExtResource("3_5vw27")
@@ -278,6 +282,13 @@ position = Vector2(-10, 40)
 scale = Vector2(15, 15)
 sprite_frames = SubResource("SpriteFrames_w48qg")
 animation = &"idle"
+
+[node name="WinZone" type="Area2D" parent="."]
+script = ExtResource("2_5h6wk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinZone"]
+position = Vector2(0, 2700)
+shape = SubResource("RectangleShape2D_winzone")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(78.99999, 18)
